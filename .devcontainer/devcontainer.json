@@ -1,0 +1,13 @@
+{
+	"name": "morden-C-learn",
+	"image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04",
+	"remoteUser": "vscode",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools"
+			]
+		}
+	}
+}
