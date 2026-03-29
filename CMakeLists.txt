@@ -9,6 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(main
 	src/main.cpp
 	src/Candidate.cpp
+    src/Jobs.cpp
 )
 
 target_include_directories(main PRIVATE include)
