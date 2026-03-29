@@ -32,6 +32,14 @@ public:
     // printSummary（先宣告，不用實作）
     void printSummary() const;
 
+    // getter functions
+    const std::string& getName() const;
+    int getBirthYear() const;
+    const std::string& getUniversity() const;
+    const std::string& getMajor() const;
+    int getYearsOfExperience() const;
+    ApplicationStatus getStatus() const;
+
 private:
     // TODO: member variables
     std::string name;

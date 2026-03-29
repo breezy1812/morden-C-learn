@@ -21,6 +21,25 @@ void Candidate::updateStatus(ApplicationStatus newStatus) {
     status = newStatus;
 }
 
+const std::string& Candidate::getName() const {
+    return name;
+}
+int Candidate::getBirthYear() const {
+    return birthYear;
+}
+const std::string& Candidate::getUniversity() const {
+    return university;
+}
+const std::string& Candidate::getMajor() const {
+    return major;
+}
+int Candidate::getYearsOfExperience() const {
+    return yearsOfExperience;
+}
+ApplicationStatus Candidate::getStatus() const {
+    return status;
+}
+
 void Candidate::printSummary() const {
     std::cout << "Name: " << name << std::endl;
     std::cout << "Birth Year: " << birthYear << std::endl;
@@ -29,7 +48,11 @@ void Candidate::printSummary() const {
     std::cout << "Years of Experience: " << yearsOfExperience << std::endl;
     std::cout << "Skills: ";
     for (const auto& skill : skills) {
-        std::cout << skill << ", ";
+        // 為了在列印技能時，技能之間用逗號分隔，但不在第一個技能前面加逗號
+        if (&skill != &skills.front()) {
+            std::cout << ", ";
+        }
+        std::cout << skill;
     }
 
     std::cout << std::endl;
