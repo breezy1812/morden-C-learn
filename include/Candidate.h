@@ -30,7 +30,7 @@ public:
     void updateStatus(ApplicationStatus newStatus);
 
     // printSummary（先宣告，不用實作）
-    void printSummary();
+    void printSummary() const;
 
 private:
     // TODO: member variables
